@@ -14,5 +14,17 @@
         $requet=sprintf($requet,$nom,$date,$genre,$email,$ville,$mdp);
         mysqli_query(dbconnect(),$requet);
     }
+
+    function get_liste_objet(){
+        $rqt = "SELECT * FROM projet_final_objet JOIN projet_final_categorie_objet ON projet_final_objet.id_categorie=projet_final_categorie_objet.id_categorie JOIN projet_final_images_objet ON projet_final_objet.id_objet=projet_final_images_objet.id_objet JOIN projet_final_emprunt ON projet_final_objet.id_objet=projet_final_emprunt.id_objet";
+        $resultat= mysqli_query(dbconnect(), $rqt);
+        $demande=array();
+
+        while($donnee=mysqli_fetch_assoc($resultat)){
+            $demande[]=$donnee;
+        }
+
+        return $demande;
+    }
     
 ?>

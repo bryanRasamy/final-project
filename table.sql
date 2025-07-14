@@ -44,3 +44,32 @@ CREATE TABLE projet_final_emprunt(
     FOREIGN KEY (id_objet) REFERENCES projet_final_objet(id_objet)
 );
 
+INSERT INTO projet_final_categorie_objet (nom_categorie) VALUES
+('esthetique'),
+('bricollage'),
+('mecanique'),
+('cuisine');
+
+INSERT INTO projet_final_objet (nom_objet,id_categorie,id_membre) VALUES
+('maquillage',1,1),
+('rouge a levre',1,1),
+('marteau',2,1),
+('planche',2,1),
+('pelle',2,1),
+('tournevis',3,1),
+('vis',3,1),
+('couteau',4,1),
+('fourchette',4,1),
+('assiette',4,1),
+('casserole',4,1),
+('shampoing',1,2),
+('parfum',1,2),
+('scie',2,2),
+('clou',2,2),
+('perceuse',2,2),
+('cle',3,2),
+('roue',3,2),
+('jante',3,2),
+('poele',4,2),
+('marmite',4,2),
+('louche',4,2);
