@@ -40,17 +40,41 @@ ETU004018 - ETU003962
 			-sinon: redirection vers login.php + message d'erreur; ok
 			
 	-listeobjet.php:
+		-bouton recherche(lien vers recherche.php);
+		-bouton ajouter un objet(lien vers ajoutobjet.php);
 		-liste de tous les objets (mettre un date retour si emprunt);
+		-lien vers ficheobjet.php;
+
+	-recherche.php:
+		-formulaire pour:
+			-categorie;
+			-nom de l'objet;
+			-case a cocher: disponible;
+
+	-ajoutobjet.php:
+		-Formulaire:
+			-nom de l'objet;
+			-image principale;
+			-image fanampiny;
+			-supprimer les images;
+
+	-ficheobjet.php:
+		-images de l'objet;
+		-historique des emprunts;
 
 	-filtreparcategorie.php:
 		-formulaire pour choisir la categorie; ok
 		-lien vers traitementfiltrecategorie.php; ok
 
-	-traitementfiltrecategorie.php:
+	-traitementfiltrecategorie.php:*
 		-maka ny valeur tao @ filtreparcategorie.php;
 		-alaina izay donnee mifanaraka @ azy;
 		-redirection vers resultatfiltre.php;
-		
-	-resultatfiltre.php:
+
+	-resultatfiltre.php:*
 		-liste des objets par categorie;
+
+	-fichemembre.php:
+		-infos du membre;
+		-Ses objets groupees par categories; 
 
