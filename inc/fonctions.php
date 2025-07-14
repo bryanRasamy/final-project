@@ -47,7 +47,7 @@
         $params = array();      
         
         
-        if(!empty($categorie)){
+        if(!empty($categorie) AND $categorie!=0 ){
             $conditions[] = "nom_categorie LIKE '%s'";          
             $params[] = "%" . $categorie . "%";           
         }
@@ -77,6 +77,8 @@
             $sql = sprintf($sql, ...$params);
         }
         
+        echo $sql;
+
         $resultat = mysqli_query(dbconnect(), $sql);
         $demande = array();
         

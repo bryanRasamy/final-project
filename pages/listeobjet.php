@@ -40,7 +40,7 @@
                                 <div class="input-group mb-3">
                                     <div class="form-floating">
                                         <select class="form-select" aria-label="Default select example" name="categorie">
-                                            <option selected>Categorie</option>
+                                            <option value="0">Categorie</option>
                                             <?php foreach($categorie as $cat){?>
                                                 <option value="<?php echo $cat['nom_categorie'];?>"><?php echo $cat['nom_categorie'];?></option>
                                             <?php }?>
