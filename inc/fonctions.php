@@ -47,7 +47,7 @@
         $params = array();      
         
         
-        if(!empty($categorie) AND $categorie!=0 ){
+        if(!empty($categorie) || $categorie!=0 ){
             $conditions[] = "nom_categorie LIKE '%s'";          
             $params[] = "%" . $categorie . "%";           
         }

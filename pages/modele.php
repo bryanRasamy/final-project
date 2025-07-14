@@ -34,6 +34,7 @@
                                     <li><a class="dropdown-item" href="modele.php?page=fichemembre">Profil</a></li>
                                     <li><a class="dropdown-item" href="modele.php?page=listeobjet">Liste des objets</a></li>
                                     <li><a class="dropdown-item" href="modele.php?page=filtreparcategorie">Filtre par categorie</a>
+                                    <li><a class="dropdown-item" href="deconnexion.php">Deconnexion</a>
                                 </ul>
                             </li>
                         </ul>
