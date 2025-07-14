@@ -41,6 +41,11 @@ ETU004018 - ETU003962
 			
 	-listeobjet.php:
 		-liste de tous les objets (mettre un date retour si emprunt);
-		
+
 	-filtreparcategorie.php:
+		-formulaire pour choisir la categorie; ok
+		-lien vers traitementfiltrecategorie.php; ok
+
+	-resultatfiltre.php:
+		-liste des objets par categorie;
 

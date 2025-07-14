@@ -33,6 +33,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="modele.php?page=listedepartements">Profil</a></li>
                                     <li><a class="dropdown-item" href="modele.php?page=listeobjet">Liste des objets</a></li>
+                                    <li><a class="dropdown-item" href="modele.php?page=filtreparcategorie">Filtre par categorie</a>
                                 </ul>
                             </li>
                         </ul>

@@ -26,5 +26,17 @@
 
         return $demande;
     }
+
+    function get_categorie(){
+        $rqt = "SELECT * FROM projet_final_categorie_objet ";
+        $resultat= mysqli_query(dbconnect(), $rqt);
+        $demande=array();
+
+        while($donnee=mysqli_fetch_assoc($resultat)){
+            $demande[]=$donnee;
+        }
+
+        return $demande;
+    }
     
 ?>
