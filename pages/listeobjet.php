@@ -31,7 +31,6 @@
                             <?php }?>
                         </article>
                     </section>
-                    
                 </article>
             </section>
         <?php }?>
