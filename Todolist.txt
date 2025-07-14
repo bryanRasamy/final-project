@@ -84,3 +84,8 @@ ETU004018 - ETU003962
 		-infos du membre;
 		-Ses objets groupees par categories; 
 
+
+	version3 partie2:
+		-aficher les listes de emprunts de membre connecte
+		-si on clique un, il y a une emprunt.php : page formulaire OK OU ABIMER
+		-traitementemprunt.php puis vers listedonnes
