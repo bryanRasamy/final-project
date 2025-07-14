@@ -23,7 +23,15 @@
                             <h5 class="card-title"><?php echo $liste['nom_objet']?></h5>
                             <p class="card-text"><?php echo $liste['nom_categorie']?></p>
                         </article>
+                        <article class="row">
+                            <?php if(!isset($_GET['b'])){?>
+                                <a href="modele.php?page=emprunt&id_objet=<?php echo $liste['id_objet'];?>" class="btn btn-success mt-4">Emprunter</a>
+                            <?php }else{?>
+                                <p>Disponible le <?php echo get_info_objet($liste['id_objet'])['date_retour'];?></p>
+                            <?php }?>
+                        </article>
                     </section>
+                    
                 </article>
             </section>
         <?php }?>

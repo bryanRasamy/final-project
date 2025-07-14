@@ -105,4 +105,18 @@
         return $demande;
     }
 
+    function emprunter_objet($id_objet,$date_retour,$id_utilisateur){
+        $rqt = "INSERT INTO projet_final_emprunt(id_objet,id_membre,date_emprunt,date_retour) VALUES ('%s','%s',NOW(),'%s')";
+        $rqt=sprintf($rqt,$id_objet,$id_utilisateur,$date_retour);
+        mysqli_query(dbconnect(),$rqt);
+    } 
+
+    function get_info_objet($id_objet){
+        $sql="SELECT * FROM projet_final_emprunt WHERE id_objet='%s' ORDER BY date_retour DESC LIMIT 1";
+        $sql=sprintf($sql,$id_objet);
+        $resultat=mysqli_query(dbconnect(),$sql);
+        $donnees=mysqli_fetch_assoc($resultat);
+        return $donnees;
+    }
+
 ?>
