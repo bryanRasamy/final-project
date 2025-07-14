@@ -59,11 +59,11 @@
                             </article>
                             <article>
                                 <section class="form-check">
-                                    <input type="checkbox" name="disponible" value="disponible">
+                                    <input type="checkbox" name="disponible" value="0">
                                     <label class="form-check-label" for="flexCheckDefault">Disponible</label>
                                 </section>
                                 <section class="form-check">
-                                    <input type="checkbox" name="disponible" value="non_disponible">
+                                    <input type="checkbox" name="disponible" value="1">
                                     <label class="form-check-label" for="flexCheckDefault">Non disponible</label>
                                 </section>
                             </article>

@@ -58,9 +58,10 @@
         }
         
         if(!empty($disponible)){
-            if($disponible="disponible"){
+            if($disponible=0){
                 $conditions[] = "date_retour IS NOT NULL AND NOW() > date_retour GROUP BY nom_objet";
-            }else{
+            }
+            if($disponible=1){
                 $conditions[] = "date_retour IS NULL || NOW() < date_retour ";
             }
         }
