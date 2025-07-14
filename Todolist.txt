@@ -1,0 +1,45 @@
+ETU004018 - ETU003962
+
+
++TABLE MYSQL: 
+	-membre(id_membre,nom,date_naissance,genre,email,ville,mdp,image_profil);
+	-categorie_objet(id_categorie,nom_categorie);
+	-objet(id_objet,nom_objet,id_categorie,id_membre);
+	-images_objet(id_image,id_objet,nom_image);
+	-emprunt(id_emprunt,id_objet,id_membre,date_emprunt,date_retour); 
+
++PAGE PHP:
+	-index.php: 
+		-redirection vers login.php; 
+				   	
+	-connection.php: 
+		-mets la base de donnee dans une variable; 
+		
+	-modele.php: 
+		-header; 
+		-include; 
+		-footer; 
+
+	-Inscription.php:
+		-formulaire pour nom,email,mot de passe,date de naissance; 
+		-bouton valider; 
+	
+	-traitement.php:
+		-Maka ny valeur tao @ Inscription.php; 
+		-Mettre ces valeurs dans la table membre du database facebook; 
+		-redirection vers accueil.php; 
+		
+	-login.php:
+		-formulaire pour email et mot de passe; 
+		-bouton valider; 
+		
+	-traitementlogin.php:
+		-Maka ny valeur tao @ login.php; 
+		-comparena ao @ database ny valeur: 
+			-si ao: redirection vers accueil.php; 
+			-sinon: redirection vers login.php + message d'erreur; 
+			
+	-listeobjet.php:
+	
+	-filtreparcategorie.php:
+
