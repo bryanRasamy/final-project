@@ -107,3 +107,12 @@ INSERT INTO projet_final_emprunt (id_objet,id_membre,date_emprunt,date_retour) V
 (8,4,NOW(),NULL),
 (9,4,NOW(),NULL),
 (10,4,NOW(),NULL);
+
+
+CREATE OR REPLACE view 20502v_table_join as SELECT * FROM projet_final_objet JOIN projet_final_images_objet ON projet_final_objet.id_objet=projet_final_images_objet.id_objet JOIN projet_final_categorie_objet ON projet_final_categorie_objet.id_categorie=projet_final_objet.id_categorie JOIN projet_final_emprunt ON projet_final_objet.id_objet=projet_final_emprunt.id_objet JOIN projet_final_membre ON projet_final_emprunt.id_membre=projet_final_membre.id_membre GROUP BY projet_final_membre.id_membre;
+
+SELECT projet_final_categorie_objet.nom_categorie, projet_final_objet.nom_objet, projet_final_objet.id_objet FROM projet_final_objet JOIN  projet_final_categorie_objet 
+ON projet_final_objet.id_categorie = projet_final_categorie_objet.id_categorie WHERE  projet_final_objet.id_membre ='%s' ORDER BY  projet_final_categorie_objet.nom_categorie, projet_final_objet.nom_objet;
+
+
+SELECT * FROM projet_final_objet JOIN  projet_final_categorie_objet ON projet_final_objet.id_categorie = projet_final_categorie_objet.id_categorie JOIN projet_final_images_objet ON projet_final_images_objet.id_objet= projet_final_objet.id_objet WHERE  projet_final_objet.id_membre =1 ORDER BY  projet_final_categorie_objet.nom_categorie, projet_final_objet.nom_objet;";
