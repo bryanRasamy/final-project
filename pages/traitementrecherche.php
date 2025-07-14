@@ -4,7 +4,12 @@
 
     $categorie=$_GET['categorie'];
     $nom=$_GET['nom'];
-    $disponible=$_GET['disponible'];
+    if(isset($_GET['disponible'])){
+        $disponible=$_GET['disponible'];
+    }else{
+        $disponible=[];
+    }
+    
 
     $reponse=get_all_recherche($categorie,$nom,$disponible);
    

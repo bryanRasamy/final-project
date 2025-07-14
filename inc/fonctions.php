@@ -88,4 +88,18 @@
 
     }
 
+    function get_fiche_membre($id_membre)
+    {
+        $rqt = "SELECT * FROM projet_final_objet JOIN  projet_final_categorie_objet ON projet_final_objet.id_categorie = projet_final_categorie_objet.id_categorie JOIN projet_final_images_objet ON projet_final_images_objet.id_objet= projet_final_objet.id_objet WHERE  projet_final_objet.id_membre ='%s' ORDER BY  projet_final_categorie_objet.nom_categorie, projet_final_objet.nom_objet;";
+        $rqt= sprintf($rqt, $id_membre);
+        $resultat= mysqli_query(dbconnect(), $rqt);
+        $demande=array();
+
+        while($donnee=mysqli_fetch_assoc($resultat)){
+            $demande[]=$donnee;
+        }
+
+        return $demande;
+    }
+
 ?>
