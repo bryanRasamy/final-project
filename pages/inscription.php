@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="row head1 shadow">
-            <h1>Galerie</h1>
+            <h1>Site d'emprunt d'objet</h1>
         </div>
         <div class="row">
             <div class="col-3 col-sm-3 col-3"></div>
@@ -25,30 +25,6 @@
                         </div>
                     </div>
                     
-                    <p>Pseudo:</p>
-                    <?php if(!isset($_GET['p'])){ ?>
-                        <div class="input-group mb-3">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="pseudo" id="floatingInputGroup1" placeholder="Entrer votre pseudo">
-                                <label for="floatingInputGroup1">Pseudo</label>
-                            </div>
-                        </div>
-                    <?php }?>
-
-                    <?php if(isset($_GET['p'])){ ?>
-                        <div class="input-group has-validation">
-                            <div class="form-floating is-invalid">                    
-                                <div class="form-floating is-invalid">                 
-                                    <input type="text" name="pseudo" id="pseudo" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Entrez votre pseudo" required>
-                                    <label for="floatingInputGroup2">Pseudo</label>
-                                </div>
-                                <div class="invalid-feedback">
-                                    Le pseudo éxiste déjà
-                                </div>  
-                            </div>
-                        </div>
-                    <?php }?>
-
                     <p>Date de naissance:</p>
                     <div class="input-group mb-3">
                         <div class="form-floating">
@@ -57,11 +33,30 @@
                         </div>
                     </div>
 
+                    <p>Genre:</p>
+                    <div class="input-group mb-3">
+                        <div class="form-floating">
+                            <select class="form-select" aria-label="Default select example" name="genre">
+                                <option selected>Genre</option>
+                                    <option value="M">Masculin</option>
+                                    <option value="F">Feminin</option>
+                            </select>
+                        </div>
+                    </div>
+                   
                     <p>Email:</p>
                     <div class="input-group mb-3">
                         <div class="form-floating">
                             <input type="email" class="form-control" name="email" id="floatingInputGroup1" placeholder="Entrer votre Email">
                             <label for="floatingInputGroup1">Email</label>
+                        </div>
+                    </div>
+
+                    <p>Ville:</p>
+                    <div class="input-group mb-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" name="ville" id="floatingInputGroup1" placeholder="Entrer votre ville">
+                            <label for="floatingInputGroup1">Ville</label>
                         </div>
                     </div>
 

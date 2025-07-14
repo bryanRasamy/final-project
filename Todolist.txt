@@ -2,42 +2,42 @@ ETU004018 - ETU003962
 
 
 +TABLE MYSQL: 
-	-membre(id_membre,nom,date_naissance,genre,email,ville,mdp,image_profil);
-	-categorie_objet(id_categorie,nom_categorie);
-	-objet(id_objet,nom_objet,id_categorie,id_membre);
-	-images_objet(id_image,id_objet,nom_image);
-	-emprunt(id_emprunt,id_objet,id_membre,date_emprunt,date_retour); 
+	-membre(id_membre,nom,date_naissance,genre,email,ville,mdp,image_profil); ok
+	-categorie_objet(id_categorie,nom_categorie); ok
+	-objet(id_objet,nom_objet,id_categorie,id_membre); ok
+	-images_objet(id_image,id_objet,nom_image); ok
+	-emprunt(id_emprunt,id_objet,id_membre,date_emprunt,date_retour); ok
 
 +PAGE PHP:
-	-index.php: 
-		-redirection vers login.php; 
+	-index.php: ok
+		-redirection vers login.php; ok
 				   	
-	-connection.php: 
-		-mets la base de donnee dans une variable; 
+	-connection.php: ok
+		-mets la base de donnee dans une variable; ok
 		
 	-modele.php: 
 		-header; 
 		-include; 
 		-footer; 
 
-	-Inscription.php:
-		-formulaire pour nom,email,mot de passe,date de naissance; 
-		-bouton valider; 
+	-Inscription.php: ok
+		-formulaire pour nom,email,mot de passe,date de naissance; ok
+		-bouton valider; ok
 	
 	-traitement.php:
-		-Maka ny valeur tao @ Inscription.php; 
-		-Mettre ces valeurs dans la table membre du database facebook; 
-		-redirection vers accueil.php; 
+		-Maka ny valeur tao @ Inscription.php; ok
+		-Mettre ces valeurs dans la table membre du database facebook; ok
+		-redirection vers accueil.php; ok
 		
 	-login.php:
-		-formulaire pour email et mot de passe; 
-		-bouton valider; 
+		-formulaire pour email et mot de passe; ok
+		-bouton valider; ok
 		
 	-traitementlogin.php:
-		-Maka ny valeur tao @ login.php; 
+		-Maka ny valeur tao @ login.php; ok
 		-comparena ao @ database ny valeur: 
-			-si ao: redirection vers accueil.php; 
-			-sinon: redirection vers login.php + message d'erreur; 
+			-si ao: redirection vers listeobjet.php; ok 
+			-sinon: redirection vers login.php + message d'erreur; ok
 			
 	-listeobjet.php:
 	

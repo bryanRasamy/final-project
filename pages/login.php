@@ -18,63 +18,51 @@
                 <h3 class="text-center">Veuillez vous connecter</h3>
                     <form action="traitementlogin.php" method="get" class="mt-4">
                         <?php if(!isset($_GET['a'])){ ?>
-                            <label for="email">Prenom:</label>
+                            <label for="email" class="mt-4">Email:</label>
                             <div class="input-group mb-3">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="prenom" id="floatingInputGroup1" placeholder="Prenom de l'utilisateur">
-                                    <label for="floatingInputGroup1">Prenom</label>
+                                    <input type="email" class="form-control" name="email" id="floatingInputGroup1" placeholder="Email de l'utilisateur">
+                                    <label for="floatingInputGroup1">Email</label>
                                 </div>
                             </div>
-                            <label for="email" class="mt-4">Surnom:</label>
-                            <div class="input-group mb-3">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" name="surnom" id="floatingInputGroup1" placeholder="Surnom de l'utilisateur">
-                                    <label for="floatingInputGroup1">Surnom an'lisany tany am-pianarana </label>
-                                </div>
-                            </div>
-                            <label for="email">(raha tsy misy de ny prenom an'lisany)</label>
 
                             <label for="email" class="mt-4">Mot de passe:</label>
                             <div class="input-group mb-3">
                                 <div class="form-floating">
                                     <input type="password" class="form-control" name="mdp" id="floatingInputGroup1" placeholder="Mot de passe de l'utilisateur">
-                                    <label for="floatingInputGroup1">(Tapez sur espace si vous n'en avez pas encore)</label>
+                                    <label for="floatingInputGroup1">Mot de passe</label>
                                 </div>
                             </div>
                         <?php }?>
                         <?php if(isset($_GET['a'])){ ?>
-                            <label for="email">Prenom:</label>
+                            <label for="email">Email:</label>
                             <div class="input-group has-validation">
                                 <div class="form-floating is-invalid">                    
                                     <div class="form-floating is-invalid">                 
-                                        <input type="text" name="prenom" id="pseudo" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Entrez votre pseudo" required>
-                                        <label for="floatingInputGroup2">Prenom</label>
+                                        <input type="email" name="email" i class="form-control is-invalid" id="floatingInputGroup2"  placeholder="Email de l'utilisateur" required>
+                                        <label for="floatingInputGroup2">Email</label>
                                     </div> 
                                 </div>
                             </div>
-                            <label for="email" class="mt-4">Surnom:</label>
-                            <div class="input-group has-validation">
-                                <div class="form-floating is-invalid">                    
-                                    <div class="form-floating is-invalid">                 
-                                        <input type="text" name="surnom" id="pseudo" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Entrez votre pseudo" required>
-                                        <label for="floatingInputGroup2">Surnom</label>
-                                    </div>
-                                </div>
-                            </div>
+                           
                             <label for="email" class="mt-4">Mot de passe:</label>
                             <div class="input-group has-validation">
                                 <div class="form-floating is-invalid">                    
                                     <div class="form-floating is-invalid">                 
                                         <input type="text" name="mdp" id="pseudo" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Entrez votre pseudo" required>
-                                        <label for="floatingInputGroup2">(Tapez sur espace si vous n'en avez pas encore)</label>
+                                        <label for="floatingInputGroup2">mot de passe</label>
                                     </div>
                                     <div class="invalid-feedback">
-                                        Surnom, prenom ou mot de passe non valide !!
+                                        Email ou mot de passe non valide !!
                                     </div>  
                                 </div>
                             </div>
                         <?php }?>
-                    <button type="submit" class="btn-login mt-4">Se connecter</button>
+                        <div class="d-grid gap-2 mt-4">
+                            <input type="submit" value="Connexion" id="valider" class="btn btn-primary">
+                            <a href="inscription.php" class="link-danger mt-4 text-center">Pas encore de compte?</a>
+                        </div>
+                        
                 </form>
             </div>
         </div>
