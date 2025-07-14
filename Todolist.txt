@@ -46,6 +46,11 @@ ETU004018 - ETU003962
 		-formulaire pour choisir la categorie; ok
 		-lien vers traitementfiltrecategorie.php; ok
 
+	-traitementfiltrecategorie.php:
+		-maka ny valeur tao @ filtreparcategorie.php;
+		-alaina izay donnee mifanaraka @ azy;
+		-redirection vers resultatfiltre.php;
+		
 	-resultatfiltre.php:
 		-liste des objets par categorie;
 
