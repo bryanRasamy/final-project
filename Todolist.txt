@@ -40,16 +40,22 @@ ETU004018 - ETU003962
 			-sinon: redirection vers login.php + message d'erreur; ok
 			
 	-listeobjet.php:
-		-bouton recherche(lien vers recherche.php);
+		-bouton recherche;
 		-bouton ajouter un objet(lien vers ajoutobjet.php);
 		-liste de tous les objets (mettre un date retour si emprunt);
 		-lien vers ficheobjet.php;
 
-	-recherche.php:
+	-recherche:
 		-formulaire pour:
-			-categorie;
-			-nom de l'objet;
-			-case a cocher: disponible;
+			-categorie; ok
+			-nom de l'objet; ok
+			-case a cocher: disponible; ok
+			-lien vers traitementrecherche.php;
+
+	-traitementrecherche.php:
+		-maka ny valeur tao @ recherche;
+		-prendre tous les objets correspondant a cette recherche;
+		redirection vers listeobjet.php;
 
 	-ajoutobjet.php:
 		-Formulaire:

@@ -39,4 +39,53 @@
         return $demande;
     }
     
+    function get_all_recherche($categorie,$nom,$disponible){
+
+        $base_sql = "SELECT * FROM projet_final_objet JOIN projet_final_categorie_objet ON projet_final_objet.id_categorie=projet_final_categorie_objet.id_categorie JOIN projet_final_images_objet ON projet_final_objet.id_objet=projet_final_images_objet.id_objet JOIN projet_final_emprunt ON projet_final_objet.id_objet=projet_final_emprunt.id_objet";
+    
+        $conditions = array();  
+        $params = array();      
+        
+        
+        if(!empty($categorie)){
+            $conditions[] = "nom_categorie LIKE '%s'";          
+            $params[] = "%" . $categorie . "%";           
+        }
+        
+        if(!empty($nom)){
+            $conditions[] = "nom_objet LIKE '%s'";          
+            $params[] = "%" . $nom . "%";                   
+        }
+        
+        if(!empty($disponible)){
+            if($disponible="disponible"){
+                $conditions[] = "date_retour IS NOT NULL AND NOW() > date_retour GROUP BY nom_objet";
+            }else{
+                $conditions[] = "date_retour IS NULL || NOW() < date_retour ";
+            }
+        }
+        
+        
+        if(!empty($conditions)){
+            $sql = $base_sql . " WHERE " . implode(" AND ", $conditions) . ";";
+        } else {
+            $sql = $base_sql . " " . ";";
+        }
+        
+        
+        if(!empty($params)){
+            $sql = sprintf($sql, ...$params);
+        }
+        
+        $resultat = mysqli_query(dbconnect(), $sql);
+        $demande = array();
+        
+        while($donnee = mysqli_fetch_assoc($resultat)){
+            $demande[] = $donnee;
+        }
+        
+        return $demande;
+
+    }
+
 ?>
