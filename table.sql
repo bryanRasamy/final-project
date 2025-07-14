@@ -73,3 +73,37 @@ INSERT INTO projet_final_objet (nom_objet,id_categorie,id_membre) VALUES
 ('poele',4,2),
 ('marmite',4,2),
 ('louche',4,2);
+
+INSERT INTO projet_final_images_objet (id_objet,nom_image ) VALUES
+(1,NULL),
+(2,NULL),
+(3,NULL),
+(4,NULL),
+(5,NULL),
+(6,NULL),
+(7,NULL),
+(8,NULL),
+(9,NULL),
+(10,NULL),
+(11,NULL),
+(12,NULL),
+(13,NULL),
+(14,NULL),
+(15,NULL),
+(16,NULL),
+(17,NULL),
+(18,NULL),
+(19,NULL),
+(20,NULL);
+
+INSERT INTO projet_final_emprunt (id_objet,id_membre,date_emprunt,date_retour) VALUES
+(1,2,NOW(),NULL),
+(2,2,NOW(),NULL),
+(3,2,NOW(),NULL),
+(4,3,NOW(),NULL),
+(5,3,NOW(),NULL),
+(6,3,NOW(),NULL),
+(7,2,NOW(),NULL),
+(8,4,NOW(),NULL),
+(9,4,NOW(),NULL),
+(10,4,NOW(),NULL);
